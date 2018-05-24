@@ -6,16 +6,21 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-var rev = "";
+// *************** SOLUTION #1 ********************
+// function reverse(str) {
+//     var rev = "";
+//     for(var i = 0; i < str.length; i++){
+//         rev += str[str.length - (i + 1)];
+//     }
+//     return rev;
+// }
 
+// *************** SOLUTION #2 ********************
 function reverse(str) {
-
-    for(var i = 0; i < str.length; i++){
-        rev += str[str.length - (i + 1)];
-    }
-
-    console.log(rev);
-
+  const arr = str.split("");
+  arr.reverse();
+  return arr.join("");
 }
-reverse("prince");
-//module.exports = reverse;
+
+//reverse("mongo");
+module.exports = reverse;
